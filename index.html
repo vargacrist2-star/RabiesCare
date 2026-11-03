@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RabiesCare | Awareness and Prevention</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f5fa;
+    color: #263746;
+}
+
+nav {
+    background: #073b59;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 7px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #53d5ef;
+}
+
+.hero {
+    background: linear-gradient(120deg, #075477, #138bb0);
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hero button {
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: white;
+    color: #075477;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    color: #075477;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #657786;
+    line-height: 1.6;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 27px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px #00000010;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #087ca5;
+    margin: 12px 0;
+}
+
+.card p {
+    line-height: 1.7;
+    color: #63717e;
+}
+
+.card-icon {
+    font-size: 38px;
+}
+
+.about-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.9;
+}
+
+.assessment {
+    background: white;
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.progress-container {
+    background: #e1eaf0;
+    height: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.progress {
+    background: #0796c5;
+    height: 10px;
+    width: 0%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.question {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f4f8fb;
+    border-radius: 10px;
+}
+
+.question p {
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.question label {
+    display: block;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.question input {
+    margin-right: 8px;
+}
+
+.main-btn {
+    background: #087ca5;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.main-btn:hover {
+    background: #075477;
+}
+
+.reset-btn {
+    background: #647987;
+}
+
+#result {
+    display: none;
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.warning {
+    background: #fff0d9;
+    color: #805000;
+}
+
+.urgent {
+    background: #ffe3e3;
+    color: #9a2525;
+}
+
+.info {
+    background: #e0f2fa;
+    color: #075477;
+}
+
+.prevention {
+    background: #e3f2f8;
+}
+
+.prevention-list {
+    max-width: 800px;
+    margin: 30px auto 0;
+    line-height: 2;
+    padding-left: 25px;
+}
+
+.emergency {
+    background: #fff0f0;
+    text-align: center;
+}
+
+.emergency-card {
+    max-width: 650px;
+    margin: auto;
+}
+
+.call-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #c0392b;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.call-btn:hover {
+    background: #962d22;
+}
+
+footer {
+    background: #073b59;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    line-height: 1.9;
+}
+
+footer a {
+    color: #6ee1f5;
+}
+
+@media(max-width: 650px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    nav div:last-child {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    .assessment {
+        padding: 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">🛡️ RabiesCare</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#animals">Animals</a>
+        <a href="#symptoms">Symptoms</a>
+        <a href="#assessment">Assessment</a>
+        <a href="#prevention">Prevention</a>
+        <a href="#emergency">Emergency</a>
+    </div>
+
+</nav>
+
+<!-- HOME -->
+
+<header class="hero" id="home">
+
+    <h1>Protect Yourself Against Rabies</h1>
+
+    <p>
+        Welcome to RabiesCare, an educational platform
+        designed to provide information about rabies,
+        recognize possible symptoms and understand
+        how to prevent this dangerous disease.
+    </p>
+
+    <button onclick="goToAssessment()">
+        Start Risk Assessment →
+    </button>
+
+</header>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">What Is Rabies?</h2>
+
+    <p class="subtitle">
+        Learn about the disease and how it spreads.
+    </p>
+
+    <div class="about-box">
+
+        <p>
+            Rabies is a viral disease that affects the
+            central nervous system of mammals, including
+            humans and animals.
+        </p>
+
+        <p>
+            The virus is usually transmitted through
+            the saliva of an infected animal, commonly
+            through bites and scratches or saliva
+            entering broken skin or mucous membranes.
+        </p>
+
+        <p>
+            Rabies is preventable with appropriate
+            vaccination and timely medical treatment
+            after exposure.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ANIMALS -->
+
+<section id="animals" style="background:#e8f2f7;">
+
+    <h2 class="section-title">
+        Animals That Can Transmit Rabies
+    </h2>
+
+    <p class="subtitle">
+        Learn which animals can carry and transmit
+        the rabies virus.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">🐕</div>
+            <h3>Dogs</h3>
+            <p>
+                Infected dogs can transmit rabies through
+                bites and saliva entering broken skin.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🐈</div>
+            <h3>Cats</h3>
+            <p>
+                Cats can become infected and transmit
+                the virus through bites or scratches
+                contaminated with saliva.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🦇</div>
+            <h3>Bats</h3>
+            <p>
+                Bats are important rabies carriers.
+                Avoid touching or handling them.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🦊</div>
+            <h3>Foxes</h3>
+            <p>
+                Foxes can carry rabies in some regions.
+                Avoid contact with wild foxes.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🦝</div>
+            <h3>Raccoons</h3>
+            <p>
+                Raccoons can transmit rabies in regions
+                where the virus circulates.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🐾</div>
+            <h3>Skunks and Other Mammals</h3>
+            <p>
+                Skunks and other infected mammals
+                can also transmit the rabies virus.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" style="margin-top:25px;">
+        <h3>Important Information</h3>
+        <p>
+            Rabies can affect all mammals. Not every
+            animal carries the virus, and the species
+            alone cannot determine whether an animal
+            is infected.
+        </p>
+        <p>
+            Never touch an unfamiliar or potentially
+            sick animal.
+        </p>
+    </div>
+
+</section>
+
+<!-- INFORMATION -->
+
+<section>
+
+    <h2 class="section-title">Important Information</h2>
+
+    <p class="subtitle">
+        Basic facts everyone should know.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">🦠</div>
+            <h3>The Virus</h3>
+            <p>
+                Rabies is caused by a virus that affects
+                the brain and nervous system.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🐕</div>
+            <h3>Transmission</h3>
+            <p>
+                It can spread through bites and scratches
+                or saliva entering broken skin or
+                mucous membranes.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💉</div>
+            <h3>Vaccination</h3>
+            <p>
+                Vaccination of animals is an essential
+                part of rabies prevention.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🏥</div>
+            <h3>Medical Care</h3>
+            <p>
+                Immediate medical evaluation is important
+                after possible exposure.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SYMPTOMS -->
+
+<section id="symptoms" style="background:#e8f2f7;">
+
+    <h2 class="section-title">Common Rabies Symptoms</h2>
+
+    <p class="subtitle">
+        Symptoms can vary depending on the stage
+        of the disease.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">🌡️</div>
+            <h3>Fever</h3>
+            <p>
+                Elevated body temperature and general
+                discomfort.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🤕</div>
+            <h3>Headache</h3>
+            <p>
+                Pain or discomfort in the head.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Tingling</h3>
+            <p>
+                Unusual sensations near the site
+                of an exposure.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💧</div>
+            <h3>Swallowing Problems</h3>
+            <p>
+                Difficulty swallowing or painful
+                throat spasms.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Confusion</h3>
+            <p>
+                Changes in mental state or unusual behavior.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💦</div>
+            <h3>Hydrophobia</h3>
+            <p>
+                Difficulty or spasms associated with
+                attempts to drink water.
+            </p>
+        </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:25px; color:#9a2525;">
+        Warning: Symptoms alone cannot confirm rabies.
+        Never wait for symptoms after possible exposure.
+    </p>
+
+</section>
+
+<!-- ASSESSMENT -->
+
+<section id="assessment">
+
+    <h2 class="section-title">Rabies Risk Assessment</h2>
+
+    <p class="subtitle">
+        Answer these questions to receive educational guidance.
+    </p>
+
+    <div class="assessment">
+
+        <h3>Health Assessment Questionnaire</h3>
+
+        <p style="margin-top:10px;">
+            Answer all eight questions honestly.
+        </p>
+
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <p id="progressText">0 of 8 questions answered</p>
+
+        <form id="rabiesForm">
+
+            <div class="question">
+                <p>1. Have you been bitten by an animal?</p>
+                <label><input type="radio" name="q1" value="yes"> Yes</label>
+                <label><input type="radio" name="q1" value="no"> No</label>
+            </div>
+
+            <div class="question">
+                <p>2. Have you been scratched by an animal?</p>
+                <label><input type="radio" name="q2" value="yes"> Yes</label>
+                <label><input type="radio" name="q2" value="no"> No</label>
+            </div>
+
+            <div class="question">
+                <p>3. Has animal saliva contacted your eyes, mouth or broken skin?</p>
+                <label><input type="radio" name="q3" value="yes"> Yes</label>
+                <label><input type="radio" name="q3" value="no"> No</label>
+            </div>
+
+            <div class="question">
+                <p>4. Which animal was involved?</p>
+                <label><input type="radio" name="q4" value="dog"> Dog</label>
+                <label><input type="radio" name="q4" value="cat"> Cat</label>
+                <label><input type="radio" name="q4" value="bat"> Bat</label>
+                <label><input type="radio" name="q4" value="fox"> Fox</label>
+                <label><input type="radio" name="q4" value="raccoon"> Raccoon</label>
+                <label><input type="radio" name="q4" value="other"> Other mammal</label>
+                <label><input type="radio" name="q4" value="none"> No animal involved</label>
+                <label><input type="radio" name="q4" value="unknown"> Unknown</label>
+            </div>
+
+            <div class="question">
+                <p>5. Was the animal wild or unfamiliar?</p>
+                <label><input type="radio" name="q5" value="yes"> Yes</label>
+                <label><input type="radio" name="q5" value="no"> No</label>
+                <label><input type="radio" name="q5" value="unknown"> I don't know</label>
+            </div>
+
+            <div class="question">
+                <p>6. Have you experienced a fever or headache?</p>
+                <label><input type="radio" name="q6" value="yes"> Yes</label>
+                <label><input type="radio" name="q6" value="no"> No</label>
+            </div>
+
+            <div class="question">
+                <p>7. Have you experienced difficulty swallowing?</p>
+                <label><input type="radio" name="q7" value="yes"> Yes</label>
+                <label><input type="radio" name="q7" value="no"> No</label>
+            </div>
+
+            <div class="question">
+                <p>8. Have you experienced unusual confusion or agitation?</p>
+                <label><input type="radio" name="q8" value="yes"> Yes</label>
+                <label><input type="radio" name="q8" value="no"> No</label>
+            </div>
+
+            <button type="button" class="main-btn"
+            onclick="evaluateAssessment()">
+                Evaluate Answers
+            </button>
+
+            <button type="reset" class="main-btn reset-btn"
+            onclick="resetAssessment()">
+                Reset Form
+            </button>
+
+        </form>
+
+        <div id="result"></div>
+
+    </div>
+
+</section>
+
+<!-- PREVENTION -->
+
+<section class="prevention" id="prevention">
+
+    <h2 class="section-title">How to Prevent Rabies</h2>
+
+    <p class="subtitle">
+        Follow these important prevention recommendations.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">🐶</div>
+            <h3>Vaccinate Pets</h3>
+            <p>
+                Keep dogs and cats vaccinated against rabies
+                according to veterinary recommendations.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🚫</div>
+            <h3>Avoid Wild Animals</h3>
+            <p>
+                Never approach or touch unfamiliar wild
+                or potentially sick animals.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🧼</div>
+            <h3>Wash Wounds</h3>
+            <p>
+                Wash bites or scratches immediately
+                with soap and running water for 15 minutes.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🏥</div>
+            <h3>Seek Medical Help</h3>
+            <p>
+                Contact a healthcare professional immediately
+                after possible exposure.
+            </p>
+        </div>
+
+    </div>
+
+    <ul class="prevention-list">
+        <li>Do not touch animals behaving unusually.</li>
+        <li>Teach children to stay away from unfamiliar animals.</li>
+        <li>Report potentially rabid animals to local authorities.</li>
+        <li>Follow professional medical and veterinary advice.</li>
+    </ul>
+
+</section>
+
+<!-- EMERGENCY -->
+
+<section class="emergency" id="emergency">
+
+    <h2 class="section-title" style="color:#c0392b;">
+        Emergency Assistance
+    </h2>
+
+    <div class="card emergency-card">
+
+        <div style="font-size:55px;">🚨</div>
+
+        <h2 style="color:#c0392b; margin:15px;">
+            Need Emergency Help?
+        </h2>
+
+        <p style="line-height:1.8;">
+            If you are experiencing a medical emergency,
+            call the Colombian emergency number:
+        </p>
+
+        <h1 style="color:#c0392b; font-size:60px; margin:20px;">
+            123
+        </h1>
+
+        <p>
+            The emergency line is available in Colombia
+            for urgent situations.
+        </p>
+
+        <a href="tel:123" class="call-btn">
+            📞 CALL 123
+        </a>
+
+        <p style="margin-top:20px; font-size:13px;">
+            If you have been exposed to rabies,
+            seek immediate medical attention.
+            Do not wait for symptoms.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>🛡️ RabiesCare</h2>
+
+    <p>Education • Prevention • Awareness</p>
+
+    <p>
+        This website is an educational project.
+        It does not replace professional medical diagnosis.
+    </p>
+
+    <p>
+        © 2026 RabiesCare Educational Project
+    </p>
+
+</footer>
+
+<script>
+
+// NAVIGATION
+
+function goToAssessment() {
+
+    document.getElementById("assessment").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+// PROGRESS BAR
+
+const form = document.getElementById("rabiesForm");
+
+form.addEventListener("change", updateProgress);
+
+function updateProgress() {
+
+    let answered = 0;
+
+    for(let i = 1; i <= 8; i++) {
+
+        if(document.querySelector(
+            'input[name="q' + i + '"]:checked'
+        )) {
+
+            answered++;
+
+        }
+
+    }
+
+    let percentage = (answered / 8) * 100;
+
+    document.getElementById("progress").style.width =
+        percentage + "%";
+
+    document.getElementById("progressText").innerText =
+        answered + " of 8 questions answered";
+
+}
+
+
+// ASSESSMENT RESULTS
+
+function evaluateAssessment() {
+
+    let answers = {};
+
+    for(let i = 1; i <= 8; i++) {
+
+        let selected = document.querySelector(
+            'input[name="q' + i + '"]:checked'
+        );
+
+        if(!selected) {
+
+            alert("Please answer all 8 questions.");
+
+            return;
+
+        }
+
+        answers["q" + i] = selected.value;
+
+    }
+
+    // EXPOSURE CONDITIONS
+
+    let exposure =
+        answers.q1 === "yes" ||
+        answers.q2 === "yes" ||
+        answers.q3 === "yes";
+
+    let seriousSymptoms =
+        answers.q7 === "yes" ||
+        answers.q8 === "yes";
+
+    let otherSymptoms =
+        answers.q6 === "yes";
+
+    let animalNames = {
+
+        dog: "Dog",
+        cat: "Cat",
+        bat: "Bat",
+        fox: "Fox",
+        raccoon: "Raccoon",
+        other: "Other mammal",
+        none: "No animal",
+        unknown: "Unknown"
+
+    };
+
+    let animal = animalNames[answers.q4];
+
+    let result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    // POSSIBLE EXPOSURE
+
+    if(exposure) {
+
+        result.className = "urgent";
+
+        result.innerHTML = `
+
+            <h3>⚠️ Possible Rabies Exposure</h3>
+
+            <p>
+                Reported animal:
+                <strong>${animal}</strong>
+            </p>
+
+            <p>
+                Your answers indicate possible exposure
+                to the rabies virus.
+            </p>
+
+            <p>
+                Wash the affected area with soap and
+                running water for 15 minutes.
+            </p>
+
+            <p>
+                Seek immediate medical attention.
+                Do not wait for symptoms.
+            </p>
+
+            <p>
+                A healthcare professional must evaluate
+                your situation and determine whether
+                preventive treatment is necessary.
+            </p>
+
+        `;
+
+    }
+
+    // URGENT SYMPTOMS
+
+    else if(seriousSymptoms) {
+
+        result.className = "urgent";
+
+        result.innerHTML = `
+
+            <h3>⚠️ Urgent Medical Evaluation</h3>
+
+            <p>
+                Some reported symptoms require
+                immediate medical assessment.
+            </p>
+
+            <p>
+                These symptoms do not confirm rabies.
+                Seek emergency medical care immediately.
+            </p>
+
+        `;
+
+    }
+
+    // WILD ANIMAL
+
+    else if(
+        answers.q5 === "yes" ||
+        answers.q5 === "unknown"
+    ) {
+
+        result.className = "warning";
+
+        result.innerHTML = `
+
+            <h3>⚠️ Wild or Unfamiliar Animal</h3>
+
+            <p>
+                Reported animal:
+                <strong>${animal}</strong>
+            </p>
+
+            <p>
+                Avoid further contact with the animal.
+            </p>
+
+            <p>
+                If physical contact, a bite, a scratch
+                or saliva exposure occurred, seek
+                immediate medical evaluation.
+            </p>
+
+            <p>
+                Contact local animal control authorities
+                for guidance.
+            </p>
+
+        `;
+
+    }
+
+    // OTHER SYMPTOMS
+
+    else if(otherSymptoms) {
+
+        result.className = "warning";
+
+        result.innerHTML = `
+
+            <h3>Medical Evaluation Recommended</h3>
+
+            <p>
+                Fever and headaches can have many causes.
+                Consult a healthcare professional.
+            </p>
+
+            <p>
+                If any possible rabies exposure occurred,
+                seek medical attention immediately.
+            </p>
+
+        `;
+
+    }
+
+    // NO WARNING SIGNS
+
+    else {
+
+        result.className = "info";
+
+        result.innerHTML = `
+
+            <h3>Assessment Completed</h3>
+
+            <p>
+                No exposure or warning symptoms
+                were identified in your answers.
+            </p>
+
+            <p>
+                This result does not rule out rabies.
+                If you had any possible exposure,
+                seek immediate medical evaluation.
+            </p>
+
+            <p>
+                Continue following rabies prevention
+                recommendations.
+            </p>
+
+        `;
+
+    }
+
+    result.scrollIntoView({
+
+        behavior: "smooth",
+        block: "center"
+
+    });
+
+}
+
+
+// RESET FORM
+
+function resetAssessment() {
+
+    document.getElementById("result").style.display =
+        "none";
+
+    document.getElementById("progress").style.width =
+        "0%";
+
+    document.getElementById("progressText").innerText =
+        "0 of 8 questions answered";
+
+}
+
+</script>
+
+</body>
+</html>
